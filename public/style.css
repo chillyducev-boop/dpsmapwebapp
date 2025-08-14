@@ -1,0 +1,14 @@
+html, body, #map { height: 100%; margin: 0; padding: 0; }
+#panel {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(255,255,255,0.9);
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+#panel button { border: none; padding: 8px 10px; border-radius: 6px; cursor: pointer; }
+.leaflet-popup-content { font-size: 14px; }
