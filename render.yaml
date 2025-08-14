@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: karta-dps-telegram-webapp
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: WEB_APP_URL
+        sync: false
+      - key: PORT
+        value: "3000"
+    autoDeploy: true
+    healthCheckPath: "/health"
