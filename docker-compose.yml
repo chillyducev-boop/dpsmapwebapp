@@ -1,14 +1,13 @@
-version: "3.8"
+version: "3.9"
+
 services:
-  karta-dps:
+  dpsmap:
     build: .
-    container_name: karta-dps
+    container_name: dpsmapwebapp
     restart: always
     ports:
-      - "3000:3000"
+      - "5000:5000"
     environment:
-      TELEGRAM_BOT_TOKEN: "твой_токен"
-      WEB_APP_URL: "https://твой-домен"
-      PORT: 3000
-    volumes:
-      - ./data:/app/data
+      - TZ=Europe/Moscow
+      - BOT_TOKEN=8191024873:AAH83jRh0LRMu2Fmn913M8UKOgfUXhIJDL0
+      - ADMIN_ID=7557569751
